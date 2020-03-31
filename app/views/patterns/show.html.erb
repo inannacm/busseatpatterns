@@ -4,13 +4,13 @@
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
       <%= cl_image_tag @pattern.photo.key, height: 300, width: 400, crop: :fill %>
-
+      <%= @pattern.location %>
+        <%= @pattern.description %>
     </div>
+
 
     <div >
 
-        <%= @pattern.location %>
-        <%= @pattern.description %>
 
 
       </div>

@@ -5,7 +5,6 @@ class PatternsController < ApplicationController
   end
 
   def show
-    raise
     @pattern = Pattern.find(params[:id])
   end
 
@@ -37,7 +36,6 @@ class PatternsController < ApplicationController
   end
 
   def destroy
-    raise
     @pattern = Pattern.find(params[:id])
     @pattern.destroy
     redirect_to root_path

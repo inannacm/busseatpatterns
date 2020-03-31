@@ -1,19 +1,17 @@
-<br>
-<br>
-<br>
-<br>
-<div class="cards">
+
+  <div class="cards">
 <% @patterns.each do |pattern| %>
 <% if pattern.photo.attached? %>
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path pattern.photo.key, crop: :fill %>');">
 
 
-      <p><%= link_to pattern.location, pattern_path(pattern) %></p>
+      <p><%= link_to "", pattern_path(pattern) %></p>
     </div>
+    <% else %>
 
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1882004/pexels-photo-1882004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=400)">
+      <p><%= link_to pattern.location, pattern_path(pattern) %></p>
     </div>
     <% end %>
   <% end %>
   </div>
-
-<%#= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>

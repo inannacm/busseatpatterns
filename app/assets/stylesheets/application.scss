@@ -12,4 +12,56 @@
 @import "components/index";
 @import "pages/index";
 
+.body {
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+  border-style: none;
+}
 
+.card {
+  border: none;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.card-title {
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  font-size: 20px;
+  margin-left: 5px;
+
+}
+
+.card-columns {
+  display: inline-block;
+  margin-top: 130px;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+  border-style: none;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+
+
+   @include media-breakpoint-only(xs) {
+    column-count: 1;
+
+  }
+
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+
+  }
+
+   @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}

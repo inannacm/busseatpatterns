@@ -1,0 +1,21 @@
+<div class="container-1" style="margin-top: 80px">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <h1 class="mb-4">Edit a pattern</h1>
+      <%= simple_form_for [@pattern] do |f| %>
+      <%= f.input :location, label: "Location" %>
+      <%= f.input :description, label: "Describe your pattern", :input_html => {:rows => 5} %>
+      <%= f.input :photo %>
+      <%= link_to "Delete", @pattern, method: :delete %>
+      <%= f.submit class: "btn btn-primary" %>
+
+      <% end %>
+
+
+
+    </div>
+  </div>
+  <br>
+</div>
+
+
